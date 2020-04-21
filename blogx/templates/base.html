@@ -50,6 +50,10 @@
               <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             {% if request.user.is_authenticated %}
+            <li class="nav-item">
+              {# URL provided by blog/urls.py #}
+              <a class="nav-link" href="{% url 'blog:post_list' %}">{% trans "Blog" %}</a>
+            </li>
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}
                 <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
@@ -83,7 +87,7 @@
       {% endif %}
 
       {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
+        <p>Wecome to the BlogX project.</p>
       {% endblock content %}
 
     </div> <!-- /container -->
