@@ -277,6 +277,5 @@ blogx/media/
 
 .envs/*
 
-!.envs/.local/
 
 
