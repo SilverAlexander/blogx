@@ -17,5 +17,5 @@ urlpatterns = [
         '<int:post_id>/share/',
         views.post_share,
         name="post_share",
-    )
+        ),
     ]
