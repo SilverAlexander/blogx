@@ -68,6 +68,8 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "django_comments_xtd",
+    "django_comments",
 ]
 
 LOCAL_APPS = [
@@ -265,6 +267,14 @@ ACCOUNT_ADAPTER = "blogx.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = "blogx.users.adapters.SocialAccountAdapter"
 
+
+# Django-comments-xtd
+
+COMMENTS_APP = "django_comments_xtd"
+
+COMMENTS_XTD_MAX_THREAD_LEVEL = "2"
+
+COMMENTS_XTD_CONFIRM_EMAIL = True
 
 # Your stuff...
 # ------------------------------------------------------------------------------
