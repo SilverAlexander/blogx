@@ -272,7 +272,7 @@ SOCIALACCOUNT_ADAPTER = "blogx.users.adapters.SocialAccountAdapter"
 
 COMMENTS_APP = "django_comments_xtd"
 
-COMMENTS_XTD_MAX_THREAD_LEVEL = "2"
+COMMENTS_XTD_MAX_THREAD_LEVEL = 2
 
 COMMENTS_XTD_CONFIRM_EMAIL = True
 

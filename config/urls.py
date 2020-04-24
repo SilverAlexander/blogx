@@ -16,6 +16,8 @@ urlpatterns = [
     path("users/", include("blogx.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     path("blog/", include("blog.urls", namespace='blog')),
+    path(r"comments/", include("django_comments_xtd.urls")),
+
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

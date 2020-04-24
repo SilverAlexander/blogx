@@ -13,4 +13,20 @@
         Share this post
     </a>
 </p>
+
+{% get_comment_count for post as comment_count %}
+
+{{ comment_count }} comment{{comment_count|pluralize }}
+ha{{ comment_count|pluralize:"s,ve"}} been posted.
+
+{% if comment_count %}
+<hr/>
+<div class="comments">
+    {% render_comment_list for post %}
+</div>
+{% endif %}
+
+{% render_comment_form for post %}
+
+
 {% endblock %}
