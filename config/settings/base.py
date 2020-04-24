@@ -276,5 +276,11 @@ COMMENTS_XTD_MAX_THREAD_LEVEL = "2"
 
 COMMENTS_XTD_CONFIRM_EMAIL = True
 
+COMMENTS_XTD_SALT = (b"timendi causa est nescire.", b"sdopfm fpompcvj e pvfom dpfvomdfpvm.")
+
+COMMENTS_XTD_FROM_EMAIL = "noreply@example.com"
+
+COMMENTS_XTD_CONTACT_EMAIL = "helpdesk@example.com"
+
 # Your stuff...
 # ------------------------------------------------------------------------------

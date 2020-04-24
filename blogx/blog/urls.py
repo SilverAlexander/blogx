@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import include, path
 from . import views
 
 app_name = 'blog'
@@ -17,5 +17,8 @@ urlpatterns = [
         '<int:post_id>/share/',
         views.post_share,
         name="post_share",
+        ),
+    path(
+        r'comments/', include('django_comments_xtd.urls'),
         ),
     ]
