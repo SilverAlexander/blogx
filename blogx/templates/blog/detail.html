@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
 {% load comments %}
+{% load crispy_forms_tags %}
 
 {% block title %} {{ post.title }} {% endblock %}
 {% block content %}
@@ -16,8 +17,10 @@
 
 {% get_comment_count for post as comment_count %}
 
+
 {{ comment_count }} comment{{comment_count|pluralize }}
 ha{{ comment_count|pluralize:"s,ve"}} been posted.
+
 
 {% if comment_count %}
 <hr/>
@@ -26,7 +29,14 @@ ha{{ comment_count|pluralize:"s,ve"}} been posted.
 </div>
 {% endif %}
 
-{% render_comment_form for post %}
+
+
+<div class="card w-50">
+    <div class="card-body">
+        <h5 class="card-title text-center pb-1">Post your comment</h5>
+    {% render_comment_form for post %}
+    </div>
+</div>
 
 
 {% endblock %}

@@ -7,7 +7,7 @@
 {% block head_title %}{% trans "Account" %}{% endblock %}
 
 {% block inner %}
-<h1>{% trans "E-mail Addresses" %}</h1>
+<h2>{% trans "E-mail Addresses" %}</h2>
 
 {% if user.emailaddress_set.all %}
 <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
@@ -28,18 +28,25 @@
     {% else %}
     <span class="unverified">{% trans "Unverified" %}</span>
     {% endif %}
-    {% if emailaddress.primary %}<span class="primary">{% trans "Primary" %}</span>{% endif %}
+    {% if emailaddress.primary %}<span class="primary"><strong>{% trans "Primary" %}</strong></span>{% endif %}
   </label>
 </div>
   {% endfor %}
 
-<div class="form-group">
+</fieldset>
+
+<div class="form-row">
+  <div class="col-auto">
       <button class="secondaryAction btn btn-primary" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+    </div>
+    <div class="col-auto">
       <button class="secondaryAction btn btn-primary" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+    </div>
+    <div class="col-auto">
       <button class="primaryAction btn btn-primary" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
 </div>
+</div>
 
-</fieldset>
 </form>
 
 {% else %}
